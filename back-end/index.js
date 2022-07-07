@@ -15,4 +15,6 @@ app.get("/article", (req, res) => {
     res.sendFile(path.join(__dirname, "../front-end/article.html"))
 })
 
+app.get("/article")
+
 app.listen(process.env.PORT, () => {console.log("running!")})
