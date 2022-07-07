@@ -10,3 +10,7 @@ app.get("/", (req, res) => {
 app.get("/styles", (req, res) => {
     res.sendFile(path.join(__dirname, "../front-end/styles.css"))
 })
+
+
+
+app.listen(process.env.PORT, () => {console.log("running!")})
