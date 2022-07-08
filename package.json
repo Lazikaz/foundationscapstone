@@ -2,10 +2,11 @@
   "dependencies": {
     "axios": "^0.27.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "sequelize": "^6.21.2"
   },
   "scripts": {
-    "start": "node ./back-end/index.js"
+    "start": "node ./back-end/server.js"
   }
 }

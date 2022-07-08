@@ -7,7 +7,7 @@ const submitButton = document.getElementById("submitButton")
 const submitArticle = (event) => {
     event.preventDefault()
     //CHANGE TO HEROKU
-    axios.post("http://127.0.0.1:58144/api/adminpage", 
+    axios.post("http://127.0.0.1:4005/api/adminpage", 
     {
         "title": articleTitle.value,
         "image": articleImage.value,
@@ -15,7 +15,7 @@ const submitArticle = (event) => {
         "content": articleContent.value
     })
     .then(res => {
-        alert("Article submitted!")
+        console.log(res.data)
     })
     .catch(() => {
         alert("failed")
