@@ -1,10 +1,12 @@
 const express = require ("express")
 const path = require("path")
+let cors = require("cors")
 
 const app = express()
+app.use(cors())
+app.use(express.json())
 
-
-//Index html and styles------------------------------------------
+//Index----------------------------------------------------------
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../front-end/index.html"))
@@ -14,8 +16,8 @@ app.get("/styles", (req, res) => {
     res.sendFile(path.join(__dirname, "../front-end/styles.css"))
 })
 
-//----------------------------------------------------------------
-//Article html and styles-----------------------------------------
+//---------------------------------------------------------------
+//Article--------------------------------------------------------
 
 app.get("/article", (req, res) => {
     res.sendFile(path.join(__dirname, "../front-end/article.html"))
@@ -26,7 +28,7 @@ app.get("/article/styles", (req, res) => {
 })
 
 //----------------------------------------------------------------
-//Admin tools html and styles-------------------------------------
+//Admin-----------------------------------------------------------
 
 app.get("/adminpage", (req, res) => {
     res.sendFile(path.join(__dirname, "../front-end/adminPage.html"))
@@ -36,6 +38,9 @@ app.get("/adminpage/styles", (req, res) => {
     res.sendFile(path.join(__dirname, "../front-end/adminPageStyles.css"))
 })
 
-//----------------------------------------------------------------
+app.post("/api/adminpage", (req, res) => {
+})
 
-app.listen(process.env.PORT, () => {console.log("running!")})
+//----------------------------------------------------------------
+//CHANGE TO process.env.PORT
+app.listen(process.env.PORT, () => {console.log(`running!`)})

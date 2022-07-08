@@ -15,11 +15,11 @@
         <div id="middle">
             <h1>Create a new article</h1>
                 <form>
-                    <input type="text" placeholder="Article title">
-                    <input type="text" placeholder="Article image link">
-                    <input type="text" placeholder="Image description">
-                    <input type="text" placeholder="Article content">
-                    <button>Submit article</button>
+                    <input type="text" placeholder="Article title" id="articleTitle">
+                    <input type="text" placeholder="Article image link" id="articleImage">
+                    <input type="text" placeholder="Image description" id="imageDesc">
+                    <input type="text" placeholder="Article content" id="articleContent">
+                    <button id="submitButton">Submit article</button>
                 </form>
         </div>
         <footer>
@@ -28,5 +28,7 @@
             </a>
         </footer>
     </div>
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="./adminPage.js"></script>
 </body>
 </html>
