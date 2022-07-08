@@ -7,7 +7,7 @@ const submitButton = document.getElementById("submitButton")
 const submitArticle = (event) => {
     event.preventDefault()
     //CHANGE TO HEROKU
-    axios.post("http://127.0.0.1:4005/api/adminpage", 
+    axios.post("https://capstonebloveall.herokuapp.com/api/adminpage", 
     {
         "title": articleTitle.value,
         "image": articleImage.value,
