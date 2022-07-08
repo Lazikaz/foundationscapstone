@@ -46,7 +46,7 @@ app.get("/adminpage/js", (req, res) => {
 app.post("/api/adminpage", (req, res) => {
     res.send(
         {
-            "key": "1"
+            ...req.body
         }
     )
 })
