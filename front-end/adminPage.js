@@ -3,6 +3,7 @@ const articleImage = document.getElementById("articleImage")
 const imageDesc = document.getElementById("imageDesc")
 const articleContent = document.getElementById("articleContent")
 const submitButton = document.getElementById("submitButton")
+const axios = require("axios")
 
 const submitArticle = (event) => {
     event.preventDefault()
