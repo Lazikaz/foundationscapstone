@@ -25,6 +25,15 @@ app.get("/styles", (req, res) => {
     res.sendFile(path.join(__dirname, "../front-end/styles.css"))
 })
 
+app.get("/js", (req, res) => {
+    res.sendFile(path.join(__dirname, "../front-end/styles.css"))
+})
+
+app.get("/api/index", (req, res) => {
+    sequelize.query("SELECT * FROM articles")
+    .then(dbRes => res.status(200).send(dbRes[0]))
+})
+
 //---------------------------------------------------------------
 //Article--------------------------------------------------------
 
