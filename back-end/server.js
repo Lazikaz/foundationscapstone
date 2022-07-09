@@ -26,7 +26,7 @@ app.get("/styles", (req, res) => {
 })
 
 app.get("/js", (req, res) => {
-    res.sendFile(path.join(__dirname, "../front-end/styles.css"))
+    res.sendFile(path.join(__dirname, "../front-end/index.js"))
 })
 
 app.get("/api/index", (req, res) => {
