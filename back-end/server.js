@@ -1,7 +1,15 @@
 const express = require ("express")
 const path = require("path")
 let cors = require("cors")
-const dotenv = require("dotenv").config()
+const Sequelize = require("sequelize")
+    const sequelize = new Sequelize("postgres://juzzsrrhzkputg:52c548b2c00595c7a51528034c4ef0397125e6f111fc242f05a4f376d9df096e@ec2-52-86-115-245.compute-1.amazonaws.com:5432/d5i61prr90rjn7", {
+        dialect: 'postgres',
+        dialectOptions: {
+            ssl: {
+                rejectUnauthorized: false
+            }
+        }
+    })
 
 const app = express()
 app.use(cors())
@@ -44,11 +52,8 @@ app.get("/adminpage/js", (req, res) => {
 })
 
 app.post("/api/adminpage", (req, res) => {
-    res.send(
-        {
-            ...req.body
-        }
-    )
+    sequelize.query(`INSERT INTO articles (title, image, description, article_content) VALUES ('${req.body.title}', '${req.body.image}', '${req.body.desc}', '${req.body.content}')`)
+    .then(dbRes => res.status(200).send("successful"))
 })
 
 //----------------------------------------------------------------

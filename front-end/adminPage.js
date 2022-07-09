@@ -15,7 +15,7 @@ const submitArticle = (event) => {
         "content": articleContent.value
     })
     .then(res => {
-        console.log(res.data)
+        alert("Article successfully submitted!")
     })
     .catch(() => {
         alert("failed")
