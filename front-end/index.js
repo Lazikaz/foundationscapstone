@@ -3,7 +3,7 @@ function getArticles(){
     .then(res => {
         for(i in res.data){
             let article = document.createElement("li")
-            let list = document.getElementsByName("ul")
+            let list = document.getElementById("theList")
             let image = document.createElement("img")
             let link = document.createElement("a")
             let name = document.createElement("h3")
