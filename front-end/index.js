@@ -8,10 +8,10 @@ function getArticles(){
             let link = document.createElement("a")
             let name = document.createElement("h3")
 
-            list.append(article)
-            article.append(link)
-            link.append(image)
-            link.append(name)
+            list.appendChild(article)
+            article.appendChild(link)
+            link.appendChild(image)
+            link.appendChild(name)
             link.setAttribute("href", `/article/${res.data[i].article_id}`)
             image.setAttribute("src", `${res.data[i].image}`)
             name.textContent = `${res.data[i].title}`
