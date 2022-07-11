@@ -1,6 +1,7 @@
 const query = window.location.search
 const articleID = new URLSearchParams(query)
 const id = articleID.get("id")
+alert(id)
 
 const image = document.getElementById("image")
 const summary = document.getElementById("summary")
