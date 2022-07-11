@@ -58,7 +58,7 @@ app.get("/api/article", (req, res) => {
 })
 
 app.get("/api/random", (req, res) => {
-    sendingArticle = 1
+    const sendingArticle = 1
     console.log("hit server")
     res.status(200).send(sendingArticle)
 
