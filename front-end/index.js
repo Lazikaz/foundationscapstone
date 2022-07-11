@@ -1,3 +1,5 @@
+let randomArticleLink = document.getElementById("randomarticle")
+
 function getArticles(){
     axios.get("https://capstonebloveall.herokuapp.com/api/index")
     .then(res => {
