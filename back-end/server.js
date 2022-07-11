@@ -47,6 +47,8 @@ app.get("/article/styles", (req, res) => {
     res.sendFile(path.join(__dirname, "../front-end/articleStyles.css"))
 })
 
+
+
 //----------------------------------------------------------------
 //Admin-----------------------------------------------------------
 

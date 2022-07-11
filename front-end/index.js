@@ -12,7 +12,7 @@ function getArticles(){
             article.appendChild(link)
             link.appendChild(image)
             link.appendChild(name)
-            link.setAttribute("href", `/article/${res.data[i].article_id}`)
+            link.setAttribute("href", `/article/?id=${res.data[i].article_id}`)
             image.setAttribute("src", `${res.data[i].image}`)
             name.textContent = `${res.data[i].title}`
         }
