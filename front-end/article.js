@@ -5,6 +5,7 @@ const id = articleID.get("id")
 const image = document.getElementById("image")
 const summary = document.getElementById("summary")
 const article = document.getElementById("article")
+let randomArticleLink = document.getElementById("randomarticle")
 
 function loadContent(){
     axios.get(`https://capstonebloveall.herokuapp.com/api/article/?id=${id}`)
@@ -16,4 +17,12 @@ function loadContent(){
     })
 }
 
+function chooseRandomArticle(){
+    axios.get(`https://capstonebloveall.herokuapp.com/api/random`)
+    .then(res => {
+        randomArticleLink.setAttribute("href", `/article/?id=${res.data.sendingArticle}`)
+    })
+}
+
 loadContent()
+chooseRandomArticle()
