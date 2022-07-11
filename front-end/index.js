@@ -19,4 +19,13 @@ function getArticles(){
     })
 }
 
+function chooseRandomArticle(){
+    axios.get(`https://capstonebloveall.herokuapp.com/api/random`)
+    .then(res => {
+        console.log(res.data)
+        randomArticleLink.setAttribute("href", `/article/?id=${res.data.sendingArticle}`)
+    })
+}
+
 getArticles()
+chooseRandomArticle()
