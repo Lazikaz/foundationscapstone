@@ -14,3 +14,5 @@ function loadContent(){
         summary.textContent = res.data.description
     })
 }
+
+loadContent()
