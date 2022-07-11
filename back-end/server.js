@@ -53,7 +53,7 @@ app.get("/article/js", (req, res) => {
 })
 
 app.get("/api/article/:id", (req, res) => {
-    sequelize.query(`SELECT * FROM articles WHERE id = ${req.params.id}`)
+    sequelize.query(`SELECT * FROM articles WHERE article_id = ${req.params.id}`)
     .then(dbRes => {res.status(200).send(dbRes[0])})
 })
 
