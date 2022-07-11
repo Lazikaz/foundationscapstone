@@ -58,21 +58,17 @@ app.get("/api/article", (req, res) => {
 })
 
 app.get("/api/random", (req, res) => {
-    const sendingArticle = 1
-    console.log("hit server")
-    res.status(200).send(sendingArticle)
-
-    // sequelize.query(`SELECT article_id FROM articles`)
-    // console.log(dbRes[0])
-    // .then(dbRes => {
-    //     let array = []
-    //     for(i = 0; i < dbRes[0].length; i++){
-    //         array.push(dbRes[0][i].article_id)
-    //     }
-    //     let sendingArticle = array[Math.ceil(Math.random() * array.length)]
-    //     console.log(sendingArticle)
-    //     res.status(200).send(sendingArticle)
-    // })
+    sequelize.query(`SELECT article_id FROM articles`)
+    .then(dbRes => {
+        console.log(dbRes[0])
+        let array = []
+        for(i = 0; i < dbRes[0].length; i++){
+            array.push(dbRes[0][i].article_id)
+        }
+        let sendingArticle = array[Math.round(Math.random() * (array.length - 1))]
+        console.log(sendingArticle)
+        res.status(200).send({"sendingArticle": `${sendingArticle}`})
+    })
 })
 
 //----------------------------------------------------------------
