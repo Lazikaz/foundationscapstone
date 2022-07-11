@@ -52,8 +52,8 @@ app.get("/article/js", (req, res) => {
     res.sendFile(path.join(__dirname, "../front-end/article.js"))
 })
 
-app.get("/api/article/:id", (req, res) => {
-    sequelize.query(`SELECT * FROM articles WHERE article_id = ${req.params.id}`)
+app.get("/api/article", (req, res) => {
+    sequelize.query(`SELECT * FROM articles WHERE article_id = ${req.query.id}`)
     .then(dbRes => {res.status(200).send(dbRes[0])})
 })
 
