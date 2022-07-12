@@ -59,7 +59,7 @@ ul{
     list-style: none;
     display: flex;
     flex-flow: row wrap;
-    overflow: scroll;
+    overflow: auto;
     width: 100%;
 }
 
