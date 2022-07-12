@@ -1,7 +1,7 @@
 <h1>What is this project?</h1>
 <p>
 It's a cool thing I made as a capstone project!<br>
-It's a mock news website made for my neighborhood. Users are able to view, read, and submit their own articles.
+It's a mock news website made for my neighborhood. Very basic in design with a lot of room for improvement, but very practical when considering how real news websites work.
 </p>
 
 <h1>What technologies were used?</h1>
